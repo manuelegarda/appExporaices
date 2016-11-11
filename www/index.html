@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta https-equiv="X-UA-Compatible" content="IE=9,10,11; frame-src 'self' https://docs.google.com" />
+   <meta https-equive="Content-Security-Policy" content="default-src *; frame-src 'self' https://docs.google.com">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; img-src * data:; font-src 'self' data:;"/>
+    <script type="phonegap.js"></script>
+     <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/jQueryMobile/jquery.mobile-1.4.5.min.js"></script>   
+    <script type="text/javascript" src="js/build/iscroll-zoom.js"></script>
+     <link rel="stylesheet" type="text/css" href="js/jQueryMobile/jquery.mobile-1.4.5.min.css">
+     <link rel="stylesheet" type="text/css" href="css/index.css">
+      <link rel="stylesheet" type="text/css" href="css/fontello.css">
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMwg5QAgdctQGnEFI0YLDwTAcUMg8WRIQ&callback=initMap"
+  type="text/javascript"></script>
+       
+    <title>APP_EXPORAICES</title>
+</head>
+
+<body class="ui-mobile-viewport ui-overlay-a" onload="onDeviceReady()">
+
+    <div id="home" data-role="page" data-url="panel-fixed-page1" >
+
+        <div class="back">
+        <h2 class="dis">DISEÑO, ARTE Y POSCONFLICTO</h2>
+            <div class="menu">
+              
+                
+                <ul class="cont-btn">
+                  <a href="" data-transition="slidefade" class="esti"><li class="btn-men "><p class="icon-book"></p> PRORAMACIÓN</li></a>
+                  <a href="#mapas" data-transition="slidefade" id="mapas" class="esti"><li class="btn-men "><p class="icon-location"></p> MAPS</li></a>
+                  <a href="#speakers" data-transition="slidefade" class="esti"><li class="btn-men "><p class="icon-users"></p> SPEAKERS</li></a>
+                  <a href="#acerca_de" data-transition="slidefade" class="esti"><li class="btn-men "><p class="icon-terminal"></p> ACERCA DE</li></a>
+                </ul>
+                <a class="icon-facebook-circled fcicon face" onClick="window.open('https://www.facebook.com/events/1833006236986018', '_self', 'location=yes')
+"></a>
+
+               
+            </div>
+        </div>
+        
+  </div>     
+  </div>
+ 
+  <div data-role="page" id="actividades">
+        <div class="header">
+         <a href="#home"  class="pos"></a>
+                     SOCIAL ACTIVITIES</div>
+      <div class="cnt"> <div role="content"  id="contenido">
+           <ul data-role="listview" dat-inset="true" id="listaactiv">
+              
+           </ul>
+       </div></div>
+    </div>
+  <!--fin de social activities-->
+  <!--inicio de  tutorials-->
+    <div data-role="page" id="tutorial">
+        <div class="header">
+         <a href="#home"  class="pos"></a>
+                     TUTORIALS</div>
+                     <div class="cnt"> 
+                     <div role="content"  id="contenido">
+           <ul data-role="listview" dat-inset="true" id="lista" class="contenidotuto">
+              
+           </ul>
+       </div></div>
+      
+    </div>
+ <!--fin de  tutorials-->
+
+    <!--PROGRAMACION KEY NOTES -->
+   
+ <!--fin de keynotes-->
+
+<!--inicio daily programin wednesday-->
+    <div data-role="page" id="martes" data-transition="slide">
+        <div class="header">
+         <a href="#home"  class="pos"></a>
+                     WEDNESDAY</div>
+            <div class="cnt"> <div  data-position="fixed">
+         <div data-role="navbar" >
+           <ul>
+
+              <li><a href="#"  id="ses_wed" data-transition="slide">SESSIONS</a></li>
+             <li><a href="#" id="tuto_wed" data-transition="slide">TUTORIALS</a></li>
+           </ul>
+           <ul><li><a href="#"  id="wed_acti" data-transition="slide">ACTIVITIES</a></li>
+             <li><a href="#" id="wed_key" class="ui-btn-active" data-transition="slide">KEYNOTE</a></li></ul>
+         </div>
+          
+       </div>
+        <div data-role="content">
+          <ul data-role="listview" dat-inset="true" id="pro_wed"></ul>
+        </div></div>         
+       
+    </div>
+<!--fin daily programin wednesday-->
+
+<!--inicio daily programin thrusday-->
+<div data-role="page" id="miercoles" data-transition="slide">
+        <div class="header">
+         <a href="#home"  class="pos"></a>
+                     THURSDAY</div>
+
+      <div class="cnt">
+          <div data-role="navbar">
+           <ul>
+             <li><a href="#"  id="thru_ws"  data-transition="slide">SESSIONS</a></li>
+             <li><a href="#" id="thru_tuto" data-transition="slide">TUTORIALS</a></li>
+           </ul>
+         <ul>
+             <li><a href="#"  id="thru_act" data-transition="slide">ACTIVITIES</a></li>
+             <li><a href="#" id="thru_key" class="ui-btn-active" data-transition="slide">KEYNOTE</a></li>
+           
+          </ul> </div>    
+         <div data-role="content">
+          <ul data-role="listview" dat-inset="true" id="thrus_program"></ul>
+        </div>  
+      </div>   
+</div>
+<!--fin daily programin thursday-->
+
+<!--inicio daily programin friday-->
+<div data-role="page" id="jueves" data-transition="slide">
+        <div class="header">
+         <a href="#home"  class="pos"></a>
+                     FRIDAY</div>
+        <div class="cnt"><div  data-position="fixed">
+       <div data-role="navbar">
+           <ul>
+            <li><a href="#"  id="sesion_fri" data-transition="slide">SESSIONS</a></li>
+             <li><a href="#" id="fri_tuto" data-transition="slide">TUTORIALS</a></li>
+           </ul>
+         <ul>
+             <li><a href="#" id="fri_social" data-transition="slide">ACTIVITIES</a></li>
+             <li><a href="#" id="fri_key" data-transition="slide" class="ui-btn-active">KEYNOTE</a></li>
+           
+          </ul> </div>
+         <div data-role="content">
+          <ul data-role="listview" dat-inset="true" id="pro_friday" class="ui-btn-active" ></ul>
+        </div>
+       </div></div>             
+       
+</div>
+<!--fin daily programin friday-->
+
+
+<div data-role="page" id="acerca_de" data-transition="slide">
+          <div class="header">
+         <a href="#home"  class="pos" data-transition="flow"></a>
+                     ACERCA DE</div>
+      <div class="cnt"> <div role="content" class="ui-content" id="contenido">
+            <p>DEVELOPMENT BY: </p>
+           <div class="tarjeta">
+             <h3 class="nombre">Janier Alejandro Banguera Correa</h3>
+             <h3 class="correo">alejo95@unimayor.edu.co</h3>
+             <h3 class="movil">(+057) 313 419 9115</h3>
+           </div>
+           <div class="tarjeta">
+             <h3 class="nombre">Manuel Arturo Melo Legarda</h3>
+             <h3 class="correo">manuelegarda@unimayor.edu.co</h3>
+             <h3 class="movil">(+057) 317 853 8119</h3>
+           </div>
+           <center><img src="img/logounimayor.jpg" alt="logounimayor" width="200" height="200" class="logouni"></center>
+           
+       </div></div>
+    </div>
+  
+
+   
+    <div data-role="page" id="mapas" data-transition="slide">
+   
+                     mapas</div>
+  <div class="panelmaps">
+  <a href="#home" id="destroy"  data-transition="flow"><button  class="icon-home 
+btnsfor"> home </button> </a>
+            <button id="conducir" class="icon-car btnsfor">conducir </button>
+            <button id="caminar" class="icon-child btnsfor">caminar</button>
+    </div>
+   <div id="map">
+        
+   </div>
+     </div>
+                     
+
+
+   
+
+   
+   
+
+
+ <div data-role="page"  id="speakers" data-transition="slide">
+        <div class="header">
+         <a href="#home"  class="pos"></a>
+                     SPEAKERS</div>
+       
+        <ul class="contexpo">
+          <li class="spexpo" id="md1"><p class="icon-eye"></p>SHARPBALL</li>
+          <li class="spexpo" id="md2"><p class="icon-eye"></p>texto</li>
+          <li class="spexpo" id="md3"><p class="icon-eye"></p>texto</li>
+          <li class="spexpo" id="md4"><p class="icon-eye"></p>texto</li>
+          <li class="spexpo" id="md5"><p class="icon-eye"></p>texto</li>
+          <li class="spexpo" id="md6"><p class="icon-eye"></p>texto</li>
+          <li class="spexpo" id="md7"><p class="icon-eye"></p>texto</li>
+          <li class="spexpo" id="md8"><p class="icon-eye"></p>texto</li>
+        </ul>
+        
+
+        <div class="panelmodal" id="modal">
+              <div class="close">X</div>
+              <div class="contmodal">
+                <img src="img/expositores1.png" alt="sharpball" width="100%" height="250px">
+                <h2 class="tito icon-link-ext" onClick="window.open('http://sharpball.co/', '_self', 'location=yes')
+">SHARPBALL</h2>
+                <div id="wrapper">
+                       Es una compañía de artistas, músicos y empresarios
+                      creada por los hermanos José Luis y Miguel Jiménez junto a Andrés
+                      Cruz Barrera, con el fin de generar contenidos originales de
+                      entretenimiento transmedia que se inspiran en lo cotidiano, pero
+                      siempre extraordinario, de la idiosincrasia cultural colombiana.
+                      En el 2012 empiezan la realización de “Los Once”, una novela gráfica
+                      de ficción histórica que en 2014, bajo el sello de Laguna Libros,
+                      recibe la aclamación de la crítica dentro y fuera del país. Con el
+                      apoyo de un estímulo del Fondo para el Desarrollo Cinematográfico
+                      de 2013, la actualidad de SHARPBALL es una alianza con el
+                      reconocido estudio HIERRO animación en el cortometraje animado
+                      “El Rapto”, una nueva etapa creativa que busca alcanzar, entretener
+                      y conmover a públicos de todas las edades y rincones del planeta.
+                </div>
+              </div>
+        </div>
+
+
+
+  </div>
+    
+    
+  
+</div>
+
+
+<script src="plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js"></script>
+ <script type="text/javascript" src="js/informacion.js"></script>
+</body>
+
+</html> 
+  
