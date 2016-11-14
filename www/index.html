@@ -25,16 +25,16 @@
 
 <body class="ui-mobile-viewport ui-overlay-a" onload="onDeviceReady()">
 
-    <div id="home" data-role="page" data-url="panel-fixed-page1" >
+    <div id="home" data-role="page" data-url="panel-fixed-page1" id="menu">
 
         <div class="back">
         <h2 class="dis">DISEÑO, ARTE Y POSCONFLICTO</h2>
-            <div class="menu">
+            <div class="menu" >
               
                 
-                <ul class="cont-btn">
-                  <a href="" data-transition="slidefade" class="esti"><li class="btn-men "><p class="icon-book"></p> PRORAMACIÓN</li></a>
-                  <a href="#mapas" data-transition="slidefade" id="mapas" class="esti"><li class="btn-men "><p class="icon-location"></p> MAPS</li></a>
+                <ul class="cont-btn" >
+                  <a href="#dia"  class="esti"><li class="btn-men "><p class="icon-book"></p> PRORAMACIÓN</li></a>
+                  <a href="#mapas" data-transition="slidefade" id="mapas" class="esti"><li class="btn-men "><p class="icon-location"></p> MAPAS</li></a>
                   <a href="#speakers" data-transition="slidefade" class="esti"><li class="btn-men "><p class="icon-users"></p> SPEAKERS</li></a>
                   <a href="#acerca_de" data-transition="slidefade" class="esti"><li class="btn-men "><p class="icon-terminal"></p> ACERCA DE</li></a>
                 </ul>
@@ -42,16 +42,28 @@
 "></a>
 
                
-            </div>
+    
         </div>
         
-  </div>     
+  </div> 
+      <div id="dia" data-role="panel" data-position="right" data-display="reveal" >
+    
+        <ul data-role="listview"  dat-inset="true" >
+            <li data-role="list-divider" >DIA </li>
+            <li><a href="#martes"   id="programartes" data-transition="slide">MARTES </a></li>
+            <li><a href="#miercoles" id="programiercoles"   data-transition="slide">MIERCOLES</a></li>
+            <li><a href="#jueves"  id="prograjueves"  data-transition="slide">JUEVES</a></li>  
+            
+            <button class="ui-btn-icon-left ui-icon-delete"  data-rel="close">CERRAR</button>          
+        </ul>
+    </div>
   </div>
+ 
  
   <div data-role="page" id="actividades">
         <div class="header">
          <a href="#home"  class="pos"></a>
-                     SOCIAL ACTIVITIES</div>
+                     ACTIVIDADES SOCIALES</div>
       <div class="cnt"> <div role="content"  id="contenido">
            <ul data-role="listview" dat-inset="true" id="listaactiv">
               
@@ -63,7 +75,7 @@
     <div data-role="page" id="tutorial">
         <div class="header">
          <a href="#home"  class="pos"></a>
-                     TUTORIALS</div>
+                     TALLERES</div>
                      <div class="cnt"> 
                      <div role="content"  id="contenido">
            <ul data-role="listview" dat-inset="true" id="lista" class="contenidotuto">
@@ -81,17 +93,17 @@
 <!--inicio daily programin wednesday-->
     <div data-role="page" id="martes" data-transition="slide">
         <div class="header">
-         <a href="#home"  class="pos"></a>
-                     WEDNESDAY</div>
+         <a href="#home"  class="pos" data-transition="flow" ></a>
+                     MARTES</div>
             <div class="cnt"> <div  data-position="fixed">
          <div data-role="navbar" >
            <ul>
 
-              <li><a href="#"  id="ses_wed" data-transition="slide">SESSIONS</a></li>
-             <li><a href="#" id="tuto_wed" data-transition="slide">TUTORIALS</a></li>
+              <li><a href="#"  id="ponen_wed" class="ui-btn-active" data-transition="slide">PONENCIAS</a></li>
+             <li><a href="#" id="taller_wed" data-transition="slide">TALLERES</a></li>
            </ul>
-           <ul><li><a href="#"  id="wed_acti" data-transition="slide">ACTIVITIES</a></li>
-             <li><a href="#" id="wed_key" class="ui-btn-active" data-transition="slide">KEYNOTE</a></li></ul>
+           <ul><li><a href="#"  id="wed_acti" data-transition="slide">ACTIVIDADES</a></li>
+             </ul>
          </div>
           
        </div>
@@ -105,18 +117,18 @@
 <!--inicio daily programin thrusday-->
 <div data-role="page" id="miercoles" data-transition="slide">
         <div class="header">
-         <a href="#home"  class="pos"></a>
-                     THURSDAY</div>
+         <a href="#home"  class="pos" data-transition="flow"></a>
+                     MIERCOLES</div>
 
       <div class="cnt">
           <div data-role="navbar">
            <ul>
-             <li><a href="#"  id="thru_ws"  data-transition="slide">SESSIONS</a></li>
-             <li><a href="#" id="thru_tuto" data-transition="slide">TUTORIALS</a></li>
+             <li><a href="#"  id="ponen_mier" class="ui-btn-active" data-transition="slide">PONENCIAS</a></li>
+             <li><a href="#" id="taller_mier" data-transition="slide">TALLERES</a></li>
            </ul>
          <ul>
-             <li><a href="#"  id="thru_act" data-transition="slide">ACTIVITIES</a></li>
-             <li><a href="#" id="thru_key" class="ui-btn-active" data-transition="slide">KEYNOTE</a></li>
+             <li><a href="#"  id="mier_acti" data-transition="slide">ACTIVIDADES</a></li>
+           
            
           </ul> </div>    
          <div data-role="content">
@@ -129,17 +141,17 @@
 <!--inicio daily programin friday-->
 <div data-role="page" id="jueves" data-transition="slide">
         <div class="header">
-         <a href="#home"  class="pos"></a>
-                     FRIDAY</div>
+         <a href="#home"  class="pos" data-transition="flow"></a>
+                     JUEVES</div>
         <div class="cnt"><div  data-position="fixed">
        <div data-role="navbar">
            <ul>
-            <li><a href="#"  id="sesion_fri" data-transition="slide">SESSIONS</a></li>
-             <li><a href="#" id="fri_tuto" data-transition="slide">TUTORIALS</a></li>
+            <li><a href="#"  id="ponen_jueve" class="ui-btn-active" data-transition="slide">PONENCIA</a></li>
+             <li><a href="#" id="taller_jueve" data-transition="slide">TALLERES</a></li>
            </ul>
          <ul>
-             <li><a href="#" id="fri_social" data-transition="slide">ACTIVITIES</a></li>
-             <li><a href="#" id="fri_key" data-transition="slide" class="ui-btn-active">KEYNOTE</a></li>
+             <li><a href="#" id="jueve_acti" data-transition="slide">ACTIVIDADES</a></li>
+             
            
           </ul> </div>
          <div data-role="content">
@@ -156,7 +168,7 @@
          <a href="#home"  class="pos" data-transition="flow"></a>
                      ACERCA DE</div>
       <div class="cnt"> <div role="content" class="ui-content" id="contenido">
-            <p>DEVELOPMENT BY: </p>
+            <p>DESARROLLADO POR: </p>
            <div class="tarjeta">
              <h3 class="nombre">Janier Alejandro Banguera Correa</h3>
              <h3 class="correo">alejo95@unimayor.edu.co</h3>
@@ -166,6 +178,11 @@
              <h3 class="nombre">Manuel Arturo Melo Legarda</h3>
              <h3 class="correo">manuelegarda@unimayor.edu.co</h3>
              <h3 class="movil">(+057) 317 853 8119</h3>
+           </div>
+           <div class="tarjeta">
+             <h3 class="nombre">Isabel Cristina Melo Legarda</h3>
+             <h3 class="correo">isabellegarda@unimayor.edu.co</h3>
+             <h3 class="movil">(+057) 318 427 7212</h3>
            </div>
            <center><img src="img/logounimayor.jpg" alt="logounimayor" width="200" height="200" class="logouni"></center>
            
@@ -198,7 +215,7 @@ btnsfor"> home </button> </a>
 
  <div data-role="page"  id="speakers" data-transition="slide">
         <div class="header">
-         <a href="#home"  class="pos"></a>
+         <a href="#home"  class="pos" data-transition="flow"></a>
                      SPEAKERS</div>
        
         <ul class="contexpo">

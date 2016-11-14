@@ -1,5 +1,5 @@
 
-var ruta="http://190.5.199.19/ladc/php/";
+var ruta="http://localhost/exporaices_web/php/";
 $('.panelmaps').hide();
 $('#modal').hide();
 function onDeviceReady()
@@ -195,170 +195,89 @@ $('#destroy').on('tap',function(){
   $('#map').hide('slow/400/fast');
   $('.panelmaps').hide('slow/400/fast');
 })
-$('#btn_mp2').on('tap',function(){
-  $('#mp1').hide('slow/400/fast');
-  $('#mp3').hide('slow/400/fast');
-  $('#mp4').hide('slow/400/fast');
-  $('#mp2').show('slow/400/fast');
-})
-$('#btn_mp1').on('tap',function(){
-  $('#mp2').hide('slow/400/fast');
-  $('#mp3').hide('slow/400/fast');
-  $('#mp4').hide('slow/400/fast');
-  $('#mp1').show('slow/400/fast');
-})
-$('#btn_mp3').on('tap',function(){
-  $('#mp1').hide('slow/400/fast');
-  $('#mp2').hide('slow/400/fast');
-  $('#mp4').hide('slow/400/fast');
-  $('#mp3').show('slow/400/fast');
-})
-$('#btn_mp4').on('tap',function(){
-  $('#mp1').hide('slow/400/fast');
-  $('#mp3').hide('slow/400/fast');
-  $('#mp2').hide('slow/400/fast');
-  $('#mp4').show('slow/400/fast');
-})
 
-$('#mapa1').on('tap',function(){
-  $('#piso2').hide('slow/400/fast');
-  $('#rutafup').hide('slow/400/fast');
-  $('#piso1').show('slow/400/fast');
-})
-$('#mapa2').on('tap',function(){
-  $('#piso1').hide('slow/400/fast');
-  $('#rutafup').hide('slow/400/fast');
-  $('#piso2').show('slow/400/fast');
-})
-$('#fup').on('tap',function(){
-  $('#piso1').hide('slow/400/fast');
-  $('#rutafup').show('slow/400/fast');
-  $('#piso2').hide('slow/400/fast');
-})
 //Keynotes
-$('#btn_plenaria').on('tap',function(){
+$('#programartes').on('tap',function(){
   
- orden("MainKeynote.php",6,"#listkeynote");
+ consultas("MainPonencias.php",7,"#pro_wed","2016-11-15");
 })
 //consultas
-$('#actividades-btn').on('tap',function()
+$('#programiercoles').on('tap',function()
 {
-  orden("MainActividades.php",6,"#listaactiv");
+ consultas("MainPonencias.php",7,"#thrus_program","2016-11-16");
 })
   //tutoriales
-$('#tutorial-btn').on('tap',function()
+$('#prograjueves').on('tap',function()
 {
-  orden("Main.php",6,"#lista");
+  consultas("MainPonencias.php",7,"#pro_friday","2016-11-17");
 })
 
 
-//programación wednesday
-$('#programwed').on('tap',function(){
+//programación martes 
+$('#ponen_wed').on('tap',function(){
   
 //carga los keynotes al entrar a la ventana del dia
-consultas("MainKeynote.php",7,"#pro_wed","2016-10-19");
+consultas("MainPonencias.php",7,"#pro_wed","2016-11-15");
 })
-//caraga las sesiones del dia
-$('#ses_wed').on('tap',function(){
- 
-  programacion("MainPaper.php",7,"#pro_wed",2,"2016-10-19")
-   $('#pro_wed').hide('slow/400/fast');
-  $('#pro_wed').show('slow/400/fast');
-})
-$('#wed_key').on('tap',function()
+
+
+$('#taller_wed').on('tap',function()
 { 
 //carga los keynotes del dia
-consultas("MainKeynote.php",7,"#pro_wed","2016-10-19");
- $('#pro_wed').hide('slow/400/fast');
-  $('#pro_wed').show('slow/400/fast');
+consultas("Main.php",7,"#pro_wed","2016-11-15");
+ 
 })
 //caraga de las acitvidades  del dia 
 $('#wed_acti').on('tap',function()
 { 
- consultas("MainActividades.php",7,"#pro_wed","2016-10-19");
+ consultas("MainActividades.php",7,"#pro_wed","2016-11-15");
  $('#pro_wed').hide('slow/400/fast');
   $('#pro_wed').show('slow/400/fast');
 })
-//carga de la informacion del tutorial del di
-$('#tuto_wed').on('tap',function()
-{
-  consultas("Main.php",7,'#pro_wed',"2016-10-19");
-  $('#pro_wed').hide();
-    $('#pro_wed').show('slow/400/fast');
-})
+
+
 //fin de la programcion del wednesday
 
-//programación thrusday
-$('#programthr').on('tap',function(){
- //carga los keynotes al entrar a la ventana del dia
-consultas("MainKeynote.php",7,"#thrus_program","2016-10-20");
+//programación MIERCOLES
+$('#ponen_mier').on('tap',function(){
+  
+//carga los PONENCIAS al entrar a la ventana del dia
+consultas("MainPonencias.php",7,"#thrus_program","2016-11-16");
 })
-//caraga las sesiones del dia
-$('#thru_ws').on('tap',function(){
- 
-  programacion("MainPaper.php",7,"#thrus_program",2,"2016-10-20")
-   $('#thrus_program').hide('slow/400/fast');
-  $('#thrus_program').show('slow/400/fast');
-})
-//keynotes del dia
-$('#thru_key').on('tap',function()
-{
-consultas("MainKeynote.php",7,"#thrus_program","2016-10-20");
-$('#thrus_program').hide('slow/400/fast');
-  $('#thrus_program').show('slow/400/fast');
-})
-//actividades sociales del dia 
-$('#thru_act').on('tap',function()
+
+
+$('#taller_mier').on('tap',function()
 { 
- consultas("MainActividades.php",7,"#thrus_program","2016-10-20");
+//carga los TALLERES del dia
+consultas("Main.php",7,"#thrus_program","2016-11-16");
+ 
+})
+//caraga de las acitvidades  del dia 
+$('#mier_acti').on('tap',function()
+{ 
+ consultas("MainActividades.php",7,"#thrus_program","2016-11-16");
  $('#thrus_program').hide('slow/400/fast');
   $('#thrus_program').show('slow/400/fast');
 })
-//caraga de los tutoriales del dia
-$('#thru_tuto').on('tap',function()
-{
+
+//programacion JUEVES
+$('#ponen_jueve').on('tap',function(){
   
-  consultas("Main.php",7,'#thrus_program',"2016-10-20");
-   $('#thrus_program').hide('slow/400/fast');
-    $('#thrus_program').show('slow/400/fast');
+//carga los PONENCIAS al entrar a la ventana del dia
+consultas("MainPonencias.php",7,"#pro_friday","2016-11-17");
 })
 
-//programacion viernes
-$('#prografri').on('tap',function(){
-  
- //carga los keynotes al entrar a la ventana del dia
-consultas("MainKeynote.php",7,"#pro_friday","2016-10-21");
-})
 
-//caraga las sesiones del dia
-$('#sesion_fri').on('tap',function(){
- 
-  programacion("MainPaper.php",7,"#pro_friday",2,"2016-10-21")
-   $('#pro_friday').hide('slow/400/fast');
-  $('#pro_friday').show('slow/400/fast');
-})
-
-//carag de los keynotes del dia
-$('#fri_key').on('tap',function()
+$('#taller_jueve').on('tap',function()
 { 
-consultas("MainKeynote.php",7,"#pro_friday","2016-10-21");
+//carga los TALLERES del dia
+consultas("Main.php",7,"#pro_friday","2016-11-17");
+ 
+})
+//caraga de las acitvidades  del dia 
+$('#jueve_acti').on('tap',function()
+{ 
+ consultas("MainActividades.php",7,"#pro_friday","2016-11-17");
  $('#pro_friday').hide('slow/400/fast');
   $('#pro_friday').show('slow/400/fast');
-})
-
-//actividades sociales del dia
-$('#fri_social').on('tap',function()
-{ 
-   
- consultas("MainActividades.php",7,"#pro_friday","2016-10-21");
-   $('#pro_friday').hide('slow/400/fast');
-  $('#pro_friday').show('slow/400/fast');
-})
-
-$('#fri_tuto').on('tap',function()
-{
- 
-  consultas("Main.php",7,'#pro_friday',"2016-10-21");
-   $('#pro_friday').hide('slow/400/fast');
-    $('#pro_friday').show('slow/400/fast');
 })
